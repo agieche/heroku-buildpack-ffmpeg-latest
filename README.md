@@ -8,6 +8,11 @@ Scheduled: [![Test](https://github.com/jonathanong/heroku-buildpack-ffmpeg-lates
 A Heroku buildpack for ffmpeg that always downloads the latest [static build](http://johnvansickle.com/ffmpeg/).
 Unlike other build packs, I never compile anything.
 
+## Why this fork?
+
+Since deployments from heroku failed due to a SSL TSL error, I forked the original repo and changed the url to a working url as a temporary workaround to keep deployments coming.
+See: https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest/issues/71
+
 ## Usage
 
 Run the following from the heroku command line:
