@@ -38,6 +38,8 @@ echo "Downloading $FFMPEG_DOWNLOAD_URL" | output
 
 code=$(curl "$FFMPEG_DOWNLOAD_URL" -L --silent --fail --retry 5 --retry-max-time 15 -o ./$FFMPEG_ARCHIVE_NAME --write-out "%{http_code}")
 
+echo "http_code is $code"
+
 if [ "$code" != "200" ]; then
   echo "Unable to download ffmpeg: $code" | output && exit 1
 fi
