@@ -17,8 +17,6 @@ output() {
   done
 }
 
-env
-
 header "Installing ffmpeg"
 
 BUILD_DIR=${1:-}
@@ -33,7 +31,11 @@ cd ffmpeg
 
 if [[ -z $FFMPEG_DOWNLOAD_URL ]]; then
   echo "Variable FFMPEG_DOWNLOAD_URL isn't set, using default value" | output
+  
+  # OLD URL NOT WORKING FROM HEROKU DUE TO SSL ISSUES
   # FFMPEG_DOWNLOAD_URL="https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz"
+
+  # TEMP URL / FEEL FREE TO POINT IT TO YOUR OWN FILE
   FFMPEG_DOWNLOAD_URL="https://cookycookstaging.s3.amazonaws.com/ffmpeg-git-amd64-static.tar.xz"
 fi
 
