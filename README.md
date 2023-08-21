@@ -13,7 +13,7 @@ Unlike other build packs, I never compile anything.
 Run the following from the heroku command line:
 
 ```
-heroku buildpacks:add --index 1 https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
+heroku buildpacks:add --index 1 https://github.com/agieche/heroku-buildpack-ffmpeg-latest.git
 ```
 
 You can set a custom download URL by setting the variable `FFMPEG_DOWNLOAD_URL`.
