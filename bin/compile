@@ -17,6 +17,8 @@ output() {
   done
 }
 
+env
+
 header "Installing ffmpeg"
 
 BUILD_DIR=${1:-}
