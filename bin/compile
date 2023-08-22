@@ -57,7 +57,7 @@ fi
 
 echo "Downloading $FFMPEG_DOWNLOAD_URL" | output
 
-code=$(curl "$FFMPEG_DOWNLOAD_URL" -L --fail --retry 5 --retry-max-time 15 -o ./$FFMPEG_ARCHIVE_NAME --write-out "%{http_code}")
+code=$(curl "$FFMPEG_DOWNLOAD_URL" -L --insecure --fail --retry 5 --retry-max-time 15 -o ./$FFMPEG_ARCHIVE_NAME --write-out "%{http_code}")
 
 echo "http_code is $code"
 
