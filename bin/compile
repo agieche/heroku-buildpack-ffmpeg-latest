@@ -59,6 +59,7 @@ echo "Downloading $FFMPEG_DOWNLOAD_URL" | output
 
 echo "testing insecure"
 echo "testing tls max 1.2"
+echo "insecure"
 
 code=$(curl "$FFMPEG_DOWNLOAD_URL" --insecure --fail --retry 5 --retry-max-time 15 -o ./$FFMPEG_ARCHIVE_NAME --write-out "%{http_code}")
 
